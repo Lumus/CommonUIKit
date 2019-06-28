@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17DAD05B22C6C72F003F42F9 /* HelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DAD05A22C6C72F003F42F9 /* HelperKit.framework */; };
 		17F27ED122C6C57F00EFE38C /* CommonUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F27ECF22C6C57F00EFE38C /* CommonUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17DAD05A22C6C72F003F42F9 /* HelperKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HelperKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F27ECC22C6C57F00EFE38C /* CommonUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F27ECF22C6C57F00EFE38C /* CommonUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUIKit.h; sourceTree = "<group>"; };
 		17F27ED022C6C57F00EFE38C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -21,18 +23,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17DAD05B22C6C72F003F42F9 /* HelperKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17DAD05922C6C72F003F42F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17DAD05A22C6C72F003F42F9 /* HelperKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17F27EC222C6C57F00EFE38C = {
 			isa = PBXGroup;
 			children = (
 				17F27ECD22C6C57F00EFE38C /* Products */,
 				17F27ED722C6C59400EFE38C /* Resources */,
 				17F27ECE22C6C57F00EFE38C /* Source */,
+				17DAD05922C6C72F003F42F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
