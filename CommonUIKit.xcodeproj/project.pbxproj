@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174E392B22C6C96700BEB47A /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E392A22C6C96700BEB47A /* ContainerView.swift */; };
 		17DAD05B22C6C72F003F42F9 /* HelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DAD05A22C6C72F003F42F9 /* HelperKit.framework */; };
 		17F27ED122C6C57F00EFE38C /* CommonUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F27ECF22C6C57F00EFE38C /* CommonUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		174E392A22C6C96700BEB47A /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		17DAD05A22C6C72F003F42F9 /* HelperKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HelperKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F27ECC22C6C57F00EFE38C /* CommonUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F27ECF22C6C57F00EFE38C /* CommonUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUIKit.h; sourceTree = "<group>"; };
@@ -30,6 +32,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174E392922C6C94300BEB47A /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				174E392A22C6C96700BEB47A /* ContainerView.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
 		17DAD05922C6C72F003F42F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +69,7 @@
 		17F27ECE22C6C57F00EFE38C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				174E392922C6C94300BEB47A /* Containers */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174E392B22C6C96700BEB47A /* ContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
