@@ -30,8 +30,9 @@
 		17F27EC222C6C57F00EFE38C = {
 			isa = PBXGroup;
 			children = (
-				17F27ECE22C6C57F00EFE38C /* CommonUIKit */,
 				17F27ECD22C6C57F00EFE38C /* Products */,
+				17F27ED722C6C59400EFE38C /* Resources */,
+				17F27ECE22C6C57F00EFE38C /* Source */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,13 +44,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		17F27ECE22C6C57F00EFE38C /* CommonUIKit */ = {
+		17F27ECE22C6C57F00EFE38C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		17F27ED722C6C59400EFE38C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				17F27ECF22C6C57F00EFE38C /* CommonUIKit.h */,
 				17F27ED022C6C57F00EFE38C /* Info.plist */,
 			);
-			path = CommonUIKit;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +276,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonUIKit/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +301,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonUIKit/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
