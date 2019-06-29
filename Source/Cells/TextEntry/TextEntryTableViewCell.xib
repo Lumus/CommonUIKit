@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J7T-94-pDA">
-                        <rect key="frame" x="15" y="6.5" width="384" height="32"/>
+                        <rect key="frame" x="16" y="6.5" width="382" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="frQ-3f-dsg"/>
                         </constraints>
@@ -29,10 +29,10 @@
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="J7T-94-pDA" secondAttribute="trailing" constant="15" id="0f0-6s-4jr"/>
+                    <constraint firstAttribute="trailing" secondItem="J7T-94-pDA" secondAttribute="trailing" constant="16" id="0f0-6s-4jr"/>
                     <constraint firstItem="J7T-94-pDA" firstAttribute="top" secondItem="9P4-PI-ibY" secondAttribute="top" constant="6" id="MHj-ud-l1K"/>
                     <constraint firstItem="J7T-94-pDA" firstAttribute="centerY" secondItem="9P4-PI-ibY" secondAttribute="centerY" id="Uwt-i1-pwd"/>
-                    <constraint firstItem="J7T-94-pDA" firstAttribute="leading" secondItem="9P4-PI-ibY" secondAttribute="leading" constant="15" id="o0n-aK-AvU"/>
+                    <constraint firstItem="J7T-94-pDA" firstAttribute="leading" secondItem="9P4-PI-ibY" secondAttribute="leading" constant="16" id="o0n-aK-AvU"/>
                     <constraint firstAttribute="bottom" secondItem="J7T-94-pDA" secondAttribute="bottom" constant="6" id="x9V-Qp-YIl"/>
                 </constraints>
             </tableViewCellContentView>
