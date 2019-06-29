@@ -1,0 +1,3 @@
+[submodule "HelperKit"]
+	path = HelperKit
+	url = git@github.com:Lumus/HelperKit.git
