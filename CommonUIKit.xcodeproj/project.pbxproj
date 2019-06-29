@@ -22,6 +22,8 @@
 		17A3BAF222C74CC400999232 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3BAF122C74CC400999232 /* CellViewModel.swift */; };
 		17A3BAF622C753D200999232 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3BAF522C753D200999232 /* SelectionTableViewCell.swift */; };
 		17A3BAF822C753DE00999232 /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A3BAF722C753DE00999232 /* SelectionTableViewCell.xib */; };
+		17A3BAFB22C75B2700999232 /* SelectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3BAFA22C75B2700999232 /* SelectionTableViewCellViewModel.swift */; };
+		17A3BAFD22C75B3100999232 /* SelectionTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3BAFC22C75B3100999232 /* SelectionTableViewCellModel.swift */; };
 		17DAD05B22C6C72F003F42F9 /* HelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DAD05A22C6C72F003F42F9 /* HelperKit.framework */; };
 		17F27ED122C6C57F00EFE38C /* CommonUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F27ECF22C6C57F00EFE38C /* CommonUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		17A3BAF122C74CC400999232 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		17A3BAF522C753D200999232 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
 		17A3BAF722C753DE00999232 /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
+		17A3BAFA22C75B2700999232 /* SelectionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		17A3BAFC22C75B3100999232 /* SelectionTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCellModel.swift; sourceTree = "<group>"; };
 		17DAD05A22C6C72F003F42F9 /* HelperKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HelperKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F27ECC22C6C57F00EFE38C /* CommonUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F27ECF22C6C57F00EFE38C /* CommonUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUIKit.h; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 			children = (
 				17A3BAF522C753D200999232 /* SelectionTableViewCell.swift */,
 				17A3BAF722C753DE00999232 /* SelectionTableViewCell.xib */,
+				17A3BAFC22C75B3100999232 /* SelectionTableViewCellModel.swift */,
+				17A3BAFA22C75B2700999232 /* SelectionTableViewCellViewModel.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -272,11 +278,13 @@
 				170B5E0422C730CA00B665C0 /* UITableView+Reusable.swift in Sources */,
 				170B5E0022C730C500B665C0 /* UIColor+Hex.swift in Sources */,
 				170B5E0322C730CA00B665C0 /* UICollectionView+Reusable.swift in Sources */,
+				17A3BAFB22C75B2700999232 /* SelectionTableViewCellViewModel.swift in Sources */,
 				170B5DFE22C7303500B665C0 /* UIViewController+Alerts.swift in Sources */,
 				17A3BAE622C7398D00999232 /* TextEntryTableViewCell.swift in Sources */,
 				174E392B22C6C96700BEB47A /* ContainerView.swift in Sources */,
 				17A3BAEE22C74C9400999232 /* TextEntryTableViewCellViewModel.swift in Sources */,
 				170B5E0B22C7312E00B665C0 /* NibCreatable.swift in Sources */,
+				17A3BAFD22C75B3100999232 /* SelectionTableViewCellModel.swift in Sources */,
 				170B5E0C22C7312E00B665C0 /* Reusable.swift in Sources */,
 				170B5E0E22C7313A00B665C0 /* Storyboarded.swift in Sources */,
 				17A3BAF622C753D200999232 /* SelectionTableViewCell.swift in Sources */,

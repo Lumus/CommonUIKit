@@ -35,22 +35,4 @@ public class SelectionTableViewCell: UITableViewCell {
     }
 }
 
-public class SelectionTableViewCellViewModel {
-
-    var title: String { return model.title ?? "No Title" }
-    let model: SelectionTableViewCellModel
-
-    public init(model: SelectionTableViewCellModel) {
-        self.model = model
-    }
-}
-
-public struct SelectionTableViewCellModel {
-    let title: String?
-
-    public init(title: String?) {
-        self.title = title
-    }
-}
-
 extension SelectionTableViewCell: Reusable {}
