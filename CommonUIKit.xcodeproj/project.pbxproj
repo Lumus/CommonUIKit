@@ -51,10 +51,10 @@
 		17F27EC222C6C57F00EFE38C = {
 			isa = PBXGroup;
 			children = (
-				17F27ECD22C6C57F00EFE38C /* Products */,
 				17F27ED722C6C59400EFE38C /* Resources */,
 				17F27ECE22C6C57F00EFE38C /* Source */,
 				17DAD05922C6C72F003F42F9 /* Frameworks */,
+				17F27ECD22C6C57F00EFE38C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
