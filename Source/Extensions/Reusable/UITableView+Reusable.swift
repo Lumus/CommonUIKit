@@ -17,6 +17,12 @@ public extension UITableView {
         self.register(reusable.nib, forCellReuseIdentifier: reusable.reuseIdentifier)
     }
 
+    func register(_ reusable: [Reusable.Type]) {
+        reusable.forEach { reusableType in
+            self.register(reusableType)
+        }
+    }
+
     /// Dequeues a cell with the provided `Reusable` type and index path.
     ///
     /// - Parameters:
