@@ -31,7 +31,15 @@ public class SelectionTableViewCell: UITableViewCell {
     }
 
     private func configureCell() {
-        accessoryType = .detailDisclosureButton
+        guard let viewModel = viewModel else { return }
+
+        switch (viewModel.shouldShowDisclosure, viewModel.shouldShowInfo) {
+        case (true, true): accessoryType = .detailDisclosureButton
+        case (true, false): accessoryType = .disclosureIndicator
+        case (false, true): accessoryType = .detailButton
+
+        default: accessoryType = .none
+        }
     }
 }
 
