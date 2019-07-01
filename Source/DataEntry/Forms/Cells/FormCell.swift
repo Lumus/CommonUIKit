@@ -21,13 +21,6 @@ public enum FormCellType: String {
             return nil
         }
     }
-
-    public var reusableType: Reusable.Type {
-        switch self {
-        case .textEntry: return TextEntryTableViewCell.self
-        case .selection: return SelectionTableViewCell.self
-        }
-    }
 }
 
 
@@ -91,5 +84,20 @@ public class FormCell: Decodable {
             actionModels.append(actionModel)
         }
         return actionModels
+    }
+
+    public var reusableType: Reusable.Type? {
+        guard let cellType = cellType,
+            let cellTypeEnum = FormCellType(rawValue: cellType) else { return nil }
+        switch cellTypeEnum {
+        case .textEntry: return TextEntryTableViewCell.self
+        case .selection: return SelectionTableViewCell.self
+        }
+    }
+}
+
+extension FormCell: Equatable {
+    public static func == (lhs: FormCell, rhs: FormCell) -> Bool {
+        return lhs.cellType == rhs.cellType
     }
 }

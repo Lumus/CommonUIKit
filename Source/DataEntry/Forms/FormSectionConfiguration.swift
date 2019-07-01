@@ -23,3 +23,11 @@ public class FormSectionConfiguration: Decodable {
         cells = try keyedContainer.decodeIfPresent([FormCell].self, forKey: .cells)
     }
 }
+
+extension FormSectionConfiguration: Equatable {
+    public static func == (lhs: FormSectionConfiguration, rhs: FormSectionConfiguration) -> Bool {
+        return lhs.headerTitle == rhs.headerTitle &&
+            rhs.footerTitle == rhs.footerTitle &&
+            rhs.cells == lhs.cells
+    }
+}

@@ -8,15 +8,15 @@
 
 import Foundation
 
-public class SelectionTableViewCellViewModel {
+public class SelectionTableViewCellViewModel: CellViewModel {
+
+    let model: SelectionFormCell
 
     var title: String { return model.title ?? "No Title" }
-    let model: SelectionTableViewCellModel
+    var shouldShowInfo: Bool { return model.hasInfo ?? false }
+    var shouldShowDisclosure: Bool { return model.hasDisclosure ?? false }
 
-    var shouldShowInfo: Bool { return model.shouldShowInfo }
-    var shouldShowDisclosure: Bool { return model.shouldShowDisclosure }
-
-    public init(model: SelectionTableViewCellModel) {
+    public init(model: SelectionFormCell) {
         self.model = model
     }
 }
