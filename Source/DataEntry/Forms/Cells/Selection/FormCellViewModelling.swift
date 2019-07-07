@@ -1,5 +1,5 @@
 //
-//  CellViewModel.swift
+//  FormCellViewModelling.swift
 //  CommonUIKit
 //
 //  Created by Matt Croxson on 29/6/19.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-public protocol CellViewModel {}
+public protocol FormCellViewModelling {}

@@ -8,7 +8,7 @@
 
 import HelperKit
 
-public class TextEntryTableViewCellViewModel: CellViewModel {
+public class TextEntryTableViewCellViewModel: FormCellViewModelling {
 
     // MARK: - Properties
 

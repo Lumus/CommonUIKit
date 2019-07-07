@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SelectionTableViewCellViewModel: CellViewModel {
+public class SelectionTableViewCellViewModel: FormCellViewModelling {
 
     let model: SelectionFormCellConfiguration
 
