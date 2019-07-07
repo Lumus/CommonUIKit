@@ -12,13 +12,13 @@ public class TextEntryTableViewCellViewModel: CellViewModel {
 
     // MARK: - Properties
 
-    private let model: TextEntryFormCell
+    private let model: TextEntryFormCellConfiguration
     private let textEntryUpdateHandler: TextEntryUpdateHandler
     var placeholder: String? { return model.placeholder }
 
     // MARK: - TextEntryTableViewCellViewModel
 
-    public init(model: TextEntryFormCell,
+    public init(model: TextEntryFormCellConfiguration,
                 textEntryUpdateHandler: @escaping TextEntryUpdateHandler) {
         self.model = model
         self.textEntryUpdateHandler = textEntryUpdateHandler

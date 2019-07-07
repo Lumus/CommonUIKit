@@ -14,9 +14,9 @@
 		170B5E0B22C7312E00B665C0 /* NibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B5E0922C7312E00B665C0 /* NibCreatable.swift */; };
 		170B5E0C22C7312E00B665C0 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B5E0A22C7312E00B665C0 /* Reusable.swift */; };
 		170B5E0E22C7313A00B665C0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B5E0D22C7313A00B665C0 /* Storyboarded.swift */; };
-		174380CD22CA1AB600CB7DBB /* SelectionFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380C722CA1AB600CB7DBB /* SelectionFormCell.swift */; };
-		174380CE22CA1AB600CB7DBB /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380C822CA1AB600CB7DBB /* FormCell.swift */; };
-		174380CF22CA1AB600CB7DBB /* TextEntryFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380C922CA1AB600CB7DBB /* TextEntryFormCell.swift */; };
+		174380CD22CA1AB600CB7DBB /* SelectionFormCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380C722CA1AB600CB7DBB /* SelectionFormCellConfiguration.swift */; };
+		174380CE22CA1AB600CB7DBB /* FormCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380C822CA1AB600CB7DBB /* FormCellConfiguration.swift */; };
+		174380CF22CA1AB600CB7DBB /* TextEntryFormCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380C922CA1AB600CB7DBB /* TextEntryFormCellConfiguration.swift */; };
 		174380D122CA1AB600CB7DBB /* FormConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380CB22CA1AB600CB7DBB /* FormConfiguration.swift */; };
 		174380D222CA1AB600CB7DBB /* FormSectionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380CC22CA1AB600CB7DBB /* FormSectionConfiguration.swift */; };
 		174E392B22C6C96700BEB47A /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E392A22C6C96700BEB47A /* ContainerView.swift */; };
@@ -39,9 +39,9 @@
 		170B5E0922C7312E00B665C0 /* NibCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCreatable.swift; sourceTree = "<group>"; };
 		170B5E0A22C7312E00B665C0 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		170B5E0D22C7313A00B665C0 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		174380C722CA1AB600CB7DBB /* SelectionFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionFormCell.swift; sourceTree = "<group>"; };
-		174380C822CA1AB600CB7DBB /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
-		174380C922CA1AB600CB7DBB /* TextEntryFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryFormCell.swift; sourceTree = "<group>"; };
+		174380C722CA1AB600CB7DBB /* SelectionFormCellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionFormCellConfiguration.swift; sourceTree = "<group>"; };
+		174380C822CA1AB600CB7DBB /* FormCellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCellConfiguration.swift; sourceTree = "<group>"; };
+		174380C922CA1AB600CB7DBB /* TextEntryFormCellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryFormCellConfiguration.swift; sourceTree = "<group>"; };
 		174380CB22CA1AB600CB7DBB /* FormConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormConfiguration.swift; sourceTree = "<group>"; };
 		174380CC22CA1AB600CB7DBB /* FormSectionConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionConfiguration.swift; sourceTree = "<group>"; };
 		174E392A22C6C96700BEB47A /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
@@ -137,9 +137,9 @@
 		174380C622CA1AB600CB7DBB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				174380C822CA1AB600CB7DBB /* FormCell.swift */,
-				174380C722CA1AB600CB7DBB /* SelectionFormCell.swift */,
-				174380C922CA1AB600CB7DBB /* TextEntryFormCell.swift */,
+				174380C822CA1AB600CB7DBB /* FormCellConfiguration.swift */,
+				174380C722CA1AB600CB7DBB /* SelectionFormCellConfiguration.swift */,
+				174380C922CA1AB600CB7DBB /* TextEntryFormCellConfiguration.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -315,16 +315,16 @@
 				170B5DFE22C7303500B665C0 /* UIViewController+Alerts.swift in Sources */,
 				17A3BAE622C7398D00999232 /* TextEntryTableViewCell.swift in Sources */,
 				174380D122CA1AB600CB7DBB /* FormConfiguration.swift in Sources */,
-				174380CE22CA1AB600CB7DBB /* FormCell.swift in Sources */,
+				174380CE22CA1AB600CB7DBB /* FormCellConfiguration.swift in Sources */,
 				174380D222CA1AB600CB7DBB /* FormSectionConfiguration.swift in Sources */,
 				174E392B22C6C96700BEB47A /* ContainerView.swift in Sources */,
 				17A3BAEE22C74C9400999232 /* TextEntryTableViewCellViewModel.swift in Sources */,
 				170B5E0B22C7312E00B665C0 /* NibCreatable.swift in Sources */,
 				170B5E0C22C7312E00B665C0 /* Reusable.swift in Sources */,
 				170B5E0E22C7313A00B665C0 /* Storyboarded.swift in Sources */,
-				174380CD22CA1AB600CB7DBB /* SelectionFormCell.swift in Sources */,
+				174380CD22CA1AB600CB7DBB /* SelectionFormCellConfiguration.swift in Sources */,
 				17A3BAF622C753D200999232 /* SelectionTableViewCell.swift in Sources */,
-				174380CF22CA1AB600CB7DBB /* TextEntryFormCell.swift in Sources */,
+				174380CF22CA1AB600CB7DBB /* TextEntryFormCellConfiguration.swift in Sources */,
 				17A3BAF222C74CC400999232 /* CellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

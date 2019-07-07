@@ -10,13 +10,13 @@ import Foundation
 
 public class SelectionTableViewCellViewModel: CellViewModel {
 
-    let model: SelectionFormCell
+    let model: SelectionFormCellConfiguration
 
     var title: String { return model.unselectedTitle ?? "Select..." }
     var shouldShowInfo: Bool { return model.hasInfo ?? false }
     var shouldShowDisclosure: Bool { return model.hasDisclosure ?? false }
 
-    public init(model: SelectionFormCell) {
+    public init(model: SelectionFormCellConfiguration) {
         self.model = model
     }
 }

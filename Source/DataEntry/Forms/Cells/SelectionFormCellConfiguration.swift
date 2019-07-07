@@ -1,12 +1,12 @@
 //
-//  SelectionFormCell.swift
+//  SelectionFormCellConfiguration.swift
 //  NewRyoko
 //
 //  Created by Matt Croxson on 1/7/19.
 //  Copyright © 2019 Matt Croxson. All rights reserved.
 //
 
-public class SelectionFormCell: FormCell {
+public class SelectionFormCellConfiguration: FormCellConfiguration {
 
     public let unselectedTitle: String?
     public let hasInfo: Bool?

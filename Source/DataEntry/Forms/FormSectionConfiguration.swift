@@ -10,7 +10,7 @@ public class FormSectionConfiguration: Decodable {
 
     public let headerTitle: String?
     public let footerTitle: String?
-    public let cells: [FormCell]?
+    public let cells: [FormCellConfiguration]?
 
     private enum CodingKeys: String, CodingKey {
         case headerTitle, footerTitle, cells
@@ -20,7 +20,7 @@ public class FormSectionConfiguration: Decodable {
         let keyedContainer = try decoder.container(keyedBy: CodingKeys.self)
         headerTitle = try keyedContainer.decodeIfPresent(String.self, forKey: .headerTitle)
         footerTitle = try keyedContainer.decodeIfPresent(String.self, forKey: .footerTitle)
-        cells = try FormCell.decodeArray(usingDecoder: decoder, forKey: CodingKeys.cells)
+        cells = try FormCellConfiguration.decodeArray(usingDecoder: decoder, forKey: CodingKeys.cells)
     }
 }
 

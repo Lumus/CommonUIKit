@@ -1,5 +1,5 @@
 //
-//  FormCell.swift
+//  FormCellConfiguration.swift
 //  NewRyoko
 //
 //  Created by Matt Croxson on 1/7/19.
@@ -10,11 +10,11 @@ public enum FormCellType: String {
     case textEntry
     case selection
 
-    public func decodeActionModelInContainer(_ container: inout UnkeyedDecodingContainer) -> FormCell? {
+    public func decodeActionModelInContainer(_ container: inout UnkeyedDecodingContainer) -> FormCellConfiguration? {
         do {
             switch self {
-            case .textEntry: return try container.decode(TextEntryFormCell.self)
-            case .selection: return try container.decode(SelectionFormCell.self)
+            case .textEntry: return try container.decode(TextEntryFormCellConfiguration.self)
+            case .selection: return try container.decode(SelectionFormCellConfiguration.self)
             }
         } catch {
             assertionFailure(error.localizedDescription)
@@ -24,7 +24,7 @@ public enum FormCellType: String {
 }
 
 
-public class FormCell: Decodable {
+public class FormCellConfiguration: Decodable {
 
     public let cellType: String?
 
@@ -38,23 +38,23 @@ public class FormCell: Decodable {
         cellType = try keyedContainer.decodeIfPresent(String.self, forKey: .cellType)
     }
 
-    public static func decode<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> FormCell {
+    public static func decode<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> FormCellConfiguration {
         let container = try decoder.container(keyedBy: T.self)
         let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: key)
 
         guard let rawValue = try nestedContainer.decodeIfPresent(String.self, forKey: .cellType),
             let type = FormCellType(rawValue: rawValue)
             else {
-                return try container.decode(FormCell.self, forKey: key)
+                return try container.decode(FormCellConfiguration.self, forKey: key)
         }
 
         switch type {
-        case .selection: return try container.decode(SelectionFormCell.self, forKey: key)
-        case .textEntry: return try container.decode(TextEntryFormCell.self, forKey: key)
+        case .selection: return try container.decode(SelectionFormCellConfiguration.self, forKey: key)
+        case .textEntry: return try container.decode(TextEntryFormCellConfiguration.self, forKey: key)
         }
     }
 
-    public static func decodeIfPresent<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> FormCell? {
+    public static func decodeIfPresent<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> FormCellConfiguration? {
         let container = try decoder.container(keyedBy: T.self)
         if container.contains(key) {
             return try decode(usingDecoder: decoder, forKey: key)
@@ -63,9 +63,9 @@ public class FormCell: Decodable {
         }
     }
 
-    public static func decodeArray<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> [FormCell] {
+    public static func decodeArray<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> [FormCellConfiguration] {
         let container = try decoder.container(keyedBy: T.self)
-        var actionModels: [FormCell] = []
+        var actionModels: [FormCellConfiguration] = []
         var actionsContainer = try container.nestedUnkeyedContainer(forKey: key)
 
         // Make a copy of `actionsContainer`. This is needed as we will be iterating the `actionsContainer`. In doing so, we will have no way to get the decoder object for each element in the array if we don't make a copy.
@@ -77,7 +77,7 @@ public class FormCell: Decodable {
                 let actionType = FormCellType(rawValue: rawValue),
                 let actionModel = actionType.decodeActionModelInContainer(&actionsContainerCopy)
                 else {
-                    actionModels.append(try actionsContainerCopy.decode(FormCell.self))
+                    actionModels.append(try actionsContainerCopy.decode(FormCellConfiguration.self))
                     continue
             }
 
@@ -96,8 +96,8 @@ public class FormCell: Decodable {
     }
 }
 
-extension FormCell: Equatable {
-    public static func == (lhs: FormCell, rhs: FormCell) -> Bool {
+extension FormCellConfiguration: Equatable {
+    public static func == (lhs: FormCellConfiguration, rhs: FormCellConfiguration) -> Bool {
         return lhs.cellType == rhs.cellType
     }
 }
