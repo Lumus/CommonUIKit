@@ -20,7 +20,7 @@ public class FormSectionConfiguration: Decodable {
         let keyedContainer = try decoder.container(keyedBy: CodingKeys.self)
         headerTitle = try keyedContainer.decodeIfPresent(String.self, forKey: .headerTitle)
         footerTitle = try keyedContainer.decodeIfPresent(String.self, forKey: .footerTitle)
-        cells = try keyedContainer.decodeIfPresent([FormCell].self, forKey: .cells)
+        cells = try FormCell.decodeArray(usingDecoder: decoder, forKey: CodingKeys.cells)
     }
 }
 
