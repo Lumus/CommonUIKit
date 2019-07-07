@@ -86,6 +86,14 @@ extension FormViewController: UITableViewDataSource {
         return cell
     }
 
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.sectionHeading(for: section)
+    }
+
+    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return viewModel.sectionFooter(for: section)
+    }
+
     private func configureTextEntryCell(_ cell: TextEntryTableViewCell, at indexPath: IndexPath) {
         guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? TextEntryTableViewCellViewModel else { return }
         cell.configure(with: cellViewModel)
@@ -94,14 +102,6 @@ extension FormViewController: UITableViewDataSource {
     private func configureSelectionCell(_ cell: SelectionTableViewCell, at indexPath: IndexPath) {
         guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? SelectionTableViewCellViewModel else { return }
         cell.configure(with: cellViewModel)
-    }
-
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.sectionHeading(for: section)
-    }
-
-    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return viewModel.sectionFooter(for: section)
     }
 }
 
