@@ -6,8 +6,6 @@
 //  Copyright © 2019 Matt Croxson. All rights reserved.
 //
 
-import UIKit.UIView
-
 /// Helpers for reusable views.
 public protocol Reusable: NibCreatable {}
 

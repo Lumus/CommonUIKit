@@ -17,6 +17,12 @@ public extension UICollectionView {
         self.register(reusable.nib, forCellWithReuseIdentifier: reusable.reuseIdentifier)
     }
 
+    func register(_ reusable: [Reusable.Type]) {
+        reusable.forEach { reusableType in
+            self.register(reusableType)
+        }
+    }
+
     /// Registers the `Reusable` view with the collection view for creating supplementary views.
     ///
     /// - Parameters:
