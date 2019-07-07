@@ -23,4 +23,5 @@ public protocol FormViewModelling: ViewModelling {
     func cellViewModel(at indexPath: IndexPath) -> FormCellViewModelling?
     func sectionHeading(for section: Int) -> String?
     func sectionFooter(for section: Int) -> String?
+    func didSelectRow(at indexPath: IndexPath, completion: (FlowCoordinatorActionable) -> Void)
 }

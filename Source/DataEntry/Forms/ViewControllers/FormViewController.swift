@@ -53,6 +53,16 @@ extension FormViewController: UITableViewDelegate {
     private func configureTableViewDelegate() {
         tableView.delegate = self
     }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard viewModel.cellType(at: indexPath) == SelectionTableViewCell.self else {
+             return
+        }
+
+        viewModel.didSelectRow(at: indexPath) { action in
+            flowCoordiantor.handle(action: action, source: .direct)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
