@@ -8,19 +8,19 @@
 
 public class SelectionFormCell: FormCell {
 
-    public let title: String?
+    public let unselectedTitle: String?
     public let hasInfo: Bool?
     public let hasDisclosure: Bool?
 
     private enum CodingKeys: String, CodingKey {
-        case title
+        case unselectedTitle
         case hasInfo
         case hasDisclosure
     }
 
     required init(from decoder: Decoder) throws {
         let keyedContainer = try decoder.container(keyedBy: CodingKeys.self)
-        self.title = try keyedContainer.decodeIfPresent(String.self, forKey: .title)
+        self.unselectedTitle = try keyedContainer.decodeIfPresent(String.self, forKey: .unselectedTitle)
         self.hasInfo = try keyedContainer.decodeIfPresent(Bool.self, forKey: .hasInfo)
         self.hasDisclosure = try keyedContainer.decodeIfPresent(Bool.self, forKey: .hasDisclosure)
         try super.init(from: decoder)

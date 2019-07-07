@@ -12,7 +12,7 @@ public class SelectionTableViewCellViewModel: CellViewModel {
 
     let model: SelectionFormCell
 
-    var title: String { return model.title ?? "No Title" }
+    var title: String { return model.unselectedTitle ?? "Select..." }
     var shouldShowInfo: Bool { return model.hasInfo ?? false }
     var shouldShowDisclosure: Bool { return model.hasDisclosure ?? false }
 
