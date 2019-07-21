@@ -23,7 +23,6 @@ public enum FormCellType: String {
     }
 }
 
-
 public class FormCellConfiguration: Decodable {
 
     public let cellType: String?

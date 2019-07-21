@@ -6,7 +6,6 @@
 //  Copyright © 2019 Matt Croxson. All rights reserved.
 //
 
-
 import UIKit
 
 public protocol Storyboarded where Self: UIViewController {
