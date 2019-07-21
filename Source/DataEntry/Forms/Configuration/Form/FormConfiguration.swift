@@ -26,6 +26,6 @@ public class FormConfiguration: Decodable {
         guard let sections = sections else { return nil }
 
         let cells = sections.compactMap({ $0.cells }).reduce([], +).reduce([], { $0.contains($1) ? $0 : $0 + [$1] })
-        return cells.compactMap{$0.reusableType}
+        return cells.compactMap {$0.reusableType}
     }
 }
