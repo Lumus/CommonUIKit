@@ -27,7 +27,10 @@ public extension Storyboarded where Self: UIViewController {
 
     static func instantiate() -> Self {
         guard let viewController = storyboard.instantiateInitialViewController() as? Self else {
-            fatalError("Unable to instantiate storyboard \"\(storyboardName)\". Did you forget to set the initial view controller checkbox?")
+            fatalError("""
+                        Unable to instantiate storyboard \"\(storyboardName)\".
+                        Did you forget to set the initial view controller checkbox?
+                       """)
         }
         return viewController
     }

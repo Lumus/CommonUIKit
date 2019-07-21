@@ -37,7 +37,8 @@ public class FormCellConfiguration: Decodable {
         cellType = try keyedContainer.decodeIfPresent(String.self, forKey: .cellType)
     }
 
-    public static func decode<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> FormCellConfiguration {
+    public static func decode<T: CodingKey>(usingDecoder decoder: Decoder,
+                                            forKey key: T) throws -> FormCellConfiguration {
         let container = try decoder.container(keyedBy: T.self)
         let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: key)
 
@@ -53,7 +54,8 @@ public class FormCellConfiguration: Decodable {
         }
     }
 
-    public static func decodeIfPresent<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> FormCellConfiguration? {
+    public static func decodeIfPresent<T: CodingKey>(usingDecoder decoder: Decoder,
+                                                     forKey key: T) throws -> FormCellConfiguration? {
         let container = try decoder.container(keyedBy: T.self)
         if container.contains(key) {
             return try decode(usingDecoder: decoder, forKey: key)
@@ -62,15 +64,19 @@ public class FormCellConfiguration: Decodable {
         }
     }
 
-    public static func decodeArray<T: CodingKey>(usingDecoder decoder: Decoder, forKey key: T) throws -> [FormCellConfiguration] {
+    public static func decodeArray<T: CodingKey>(usingDecoder decoder: Decoder,
+                                                 forKey key: T) throws -> [FormCellConfiguration] {
         let container = try decoder.container(keyedBy: T.self)
         var actionModels: [FormCellConfiguration] = []
         var actionsContainer = try container.nestedUnkeyedContainer(forKey: key)
 
-        // Make a copy of `actionsContainer`. This is needed as we will be iterating the `actionsContainer`. In doing so, we will have no way to get the decoder object for each element in the array if we don't make a copy.
+        // Make a copy of `actionsContainer`. This is needed as we will be iterating the `actionsContainer`. In doing
+        // so, we will have no way to get the decoder object for each element in the array if we don't make a copy.
         var actionsContainerCopy = actionsContainer
         while actionsContainer.isAtEnd == false {
-            guard let nestedContainer = try? actionsContainer.nestedContainer(keyedBy: CodingKeys.self) else { return actionModels }
+            guard let nestedContainer = try? actionsContainer.nestedContainer(keyedBy: CodingKeys.self) else {
+                return actionModels
+            }
 
             guard let rawValue = try nestedContainer.decodeIfPresent(String.self, forKey: .cellType),
                 let actionType = FormCellType(rawValue: rawValue),

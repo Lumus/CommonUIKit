@@ -20,7 +20,7 @@ open class FormViewController: UIViewController {
     private var viewModel: FormViewModelling!
 
     public static func instantiate(viewModel: FormViewModelling,
-                            flowCoordinator: FlowCoordinator) -> FormViewController {
+                                   flowCoordinator: FlowCoordinator) -> FormViewController {
         let viewController = FormViewController.instantiate()
         viewController.viewModel = viewModel
         viewController.flowCoordiantor = flowCoordinator
@@ -105,12 +105,16 @@ extension FormViewController: UITableViewDataSource {
     }
 
     private func configureTextEntryCell(_ cell: TextEntryTableViewCell, at indexPath: IndexPath) {
-        guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? TextEntryTableViewCellViewModel else { return }
+        guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? TextEntryTableViewCellViewModel else {
+            return
+        }
         cell.configure(with: cellViewModel)
     }
 
     private func configureSelectionCell(_ cell: SelectionTableViewCell, at indexPath: IndexPath) {
-        guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? SelectionTableViewCellViewModel else { return }
+        guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? SelectionTableViewCellViewModel else {
+            return
+        }
         cell.configure(with: cellViewModel)
     }
 }

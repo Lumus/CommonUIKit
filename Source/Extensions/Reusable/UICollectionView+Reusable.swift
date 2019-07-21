@@ -49,7 +49,11 @@ public extension UICollectionView {
     ///   - kind: Kind of supplementary view to dequeue.
     ///   - indexPath: Index path of the view being dequeued.
     /// - Returns: `Reusable` view, or nil if the dequeue process fails.
-    func dequeueReusableSupplementaryView(_ reusable: Reusable.Type, ofKind kind: String, for indexPath: IndexPath) -> UICollectionReusableView {
-        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reusable.reuseIdentifier, for: indexPath)
+    func dequeueReusableSupplementaryView(_ reusable: Reusable.Type,
+                                          ofKind kind: String,
+                                          for indexPath: IndexPath) -> UICollectionReusableView {
+        return dequeueReusableSupplementaryView(ofKind: kind,
+                                                withReuseIdentifier: reusable.reuseIdentifier,
+                                                for: indexPath)
     }
 }
