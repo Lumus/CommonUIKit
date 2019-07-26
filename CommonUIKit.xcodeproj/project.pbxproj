@@ -20,6 +20,7 @@
 		174380D122CA1AB600CB7DBB /* FormConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380CB22CA1AB600CB7DBB /* FormConfiguration.swift */; };
 		174380D222CA1AB600CB7DBB /* FormSectionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174380CC22CA1AB600CB7DBB /* FormSectionConfiguration.swift */; };
 		174E392B22C6C96700BEB47A /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E392A22C6C96700BEB47A /* ContainerView.swift */; };
+		176D448622EB074900E7E57D /* UIStackView+CommonUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176D448522EB074900E7E57D /* UIStackView+CommonUIKit.swift */; };
 		17A3BAE622C7398D00999232 /* TextEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3BAE522C7398D00999232 /* TextEntryTableViewCell.swift */; };
 		17A3BAEB22C73C5D00999232 /* TextEntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A3BAEA22C73C5D00999232 /* TextEntryTableViewCell.xib */; };
 		17A3BAEE22C74C9400999232 /* TextEntryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3BAED22C74C9400999232 /* TextEntryTableViewCellViewModel.swift */; };
@@ -48,6 +49,7 @@
 		174380CB22CA1AB600CB7DBB /* FormConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormConfiguration.swift; sourceTree = "<group>"; };
 		174380CC22CA1AB600CB7DBB /* FormSectionConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionConfiguration.swift; sourceTree = "<group>"; };
 		174E392A22C6C96700BEB47A /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		176D448522EB074900E7E57D /* UIStackView+CommonUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+CommonUIKit.swift"; sourceTree = "<group>"; };
 		17A3BAE522C7398D00999232 /* TextEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryTableViewCell.swift; sourceTree = "<group>"; };
 		17A3BAEA22C73C5D00999232 /* TextEntryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextEntryTableViewCell.xib; sourceTree = "<group>"; };
 		17A3BAED22C74C9400999232 /* TextEntryTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				170B5E0622C730EC00B665C0 /* Colour */,
+				176D448722EB07A900E7E57D /* Elements */,
 				170B5E0522C730E400B665C0 /* Reusable */,
 				170B5E0722C730F300B665C0 /* ViewController */,
 			);
@@ -155,6 +158,14 @@
 				174E392A22C6C96700BEB47A /* ContainerView.swift */,
 			);
 			path = Containers;
+			sourceTree = "<group>";
+		};
+		176D448722EB07A900E7E57D /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				176D448522EB074900E7E57D /* UIStackView+CommonUIKit.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 		17A3BAF322C753B200999232 /* TextEntry */ = {
@@ -371,6 +382,7 @@
 				170B5E0322C730CA00B665C0 /* UICollectionView+Reusable.swift in Sources */,
 				17C5163522D177C400D2CB43 /* FormViewController.swift in Sources */,
 				17A3BAFB22C75B2700999232 /* SelectionTableViewCellViewModel.swift in Sources */,
+				176D448622EB074900E7E57D /* UIStackView+CommonUIKit.swift in Sources */,
 				170B5DFE22C7303500B665C0 /* UIViewController+Alerts.swift in Sources */,
 				17A3BAE622C7398D00999232 /* TextEntryTableViewCell.swift in Sources */,
 				174380D122CA1AB600CB7DBB /* FormConfiguration.swift in Sources */,
