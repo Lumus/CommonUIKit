@@ -105,14 +105,14 @@ extension FormViewController: UITableViewDataSource {
     }
 
     private func configureTextEntryCell(_ cell: TextEntryTableViewCell, at indexPath: IndexPath) {
-        guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? TextEntryTableViewCellViewModel else {
+        guard let cellViewModel = viewModel.cellViewModel(for: indexPath) as? TextEntryTableViewCellViewModel else {
             return
         }
         cell.configure(with: cellViewModel)
     }
 
     private func configureSelectionCell(_ cell: SelectionTableViewCell, at indexPath: IndexPath) {
-        guard let cellViewModel = viewModel.cellViewModel(at: indexPath) as? SelectionTableViewCellViewModel else {
+        guard let cellViewModel = viewModel.cellViewModel(for: indexPath) as? SelectionTableViewCellViewModel else {
             return
         }
         cell.configure(with: cellViewModel)

@@ -20,7 +20,7 @@ public protocol FormViewModelling: ViewModelling {
 
     func numberOfRows(in section: Int) -> Int
     func cellType(at indexPath: IndexPath) -> Reusable.Type?
-    func cellViewModel(at indexPath: IndexPath) -> FormCellViewModelling?
+    func cellViewModel(for indexPath: IndexPath) -> FormCellViewModelling?
     func sectionHeading(for section: Int) -> String?
     func sectionFooter(for section: Int) -> String?
     func didSelectRow(at indexPath: IndexPath, completion: (FlowCoordinatorActionable) -> Void)
