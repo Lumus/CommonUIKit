@@ -13,7 +13,8 @@ public extension UIColor {
     /// Initialises a colour with the provided hex string.
     ///
     /// - Parameter hex: Hex string for the colour being decoded.
-    convenience init?(hex: String) {
+    convenience init?(hex: String?) {
+        guard let hex = hex else { return nil }
         let red, green, blue, alpha: CGFloat
 
         if hex.hasPrefix("#") {
