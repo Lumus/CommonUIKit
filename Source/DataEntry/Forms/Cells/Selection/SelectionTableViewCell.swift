@@ -43,4 +43,4 @@ public class SelectionTableViewCell: UITableViewCell {
     }
 }
 
-extension SelectionTableViewCell: Reusable {}
+extension SelectionTableViewCell: ReusableView {}

@@ -22,7 +22,7 @@ public class FormConfiguration: Decodable {
         self.sections = try keyedContainer.decodeIfPresent([FormSectionConfiguration].self, forKey: .sections)
     }
 
-    public var cellTypes: [Reusable.Type]? {
+    public var cellTypes: [ReusableView.Type]? {
         guard let sections = sections else { return nil }
 
         let cells = sections.compactMap({ $0.cells }).reduce([], +).reduce([], { $0.contains($1) ? $0 : $0 + [$1] })

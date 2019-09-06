@@ -61,4 +61,4 @@ extension TextEntryTableViewCell: UITextFieldDelegate {
     }
 }
 
-extension TextEntryTableViewCell: Reusable {}
+extension TextEntryTableViewCell: ReusableView {}

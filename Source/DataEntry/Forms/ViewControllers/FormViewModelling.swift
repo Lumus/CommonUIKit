@@ -14,12 +14,12 @@ public protocol FormViewModelling: ViewModelling {
 
     var numberOfSections: Int { get }
     var title: String? { get }
-    var cellTypes: [Reusable.Type] { get }
+    var cellTypes: [ReusableView.Type] { get }
 
     // MARK: - Functions
 
     func numberOfRows(in section: Int) -> Int
-    func cellType(at indexPath: IndexPath) -> Reusable.Type?
+    func cellType(at indexPath: IndexPath) -> ReusableView.Type?
     func cellViewModel(for indexPath: IndexPath) -> FormCellViewModelling?
     func sectionHeading(for section: Int) -> String?
     func sectionFooter(for section: Int) -> String?

@@ -91,7 +91,7 @@ public class FormCellConfiguration: Decodable {
         return actionModels
     }
 
-    public var reusableType: Reusable.Type? {
+    public var reusableType: ReusableView.Type? {
         guard let cellType = cellType,
             let cellTypeEnum = FormCellType(rawValue: cellType) else { return nil }
         switch cellTypeEnum {
