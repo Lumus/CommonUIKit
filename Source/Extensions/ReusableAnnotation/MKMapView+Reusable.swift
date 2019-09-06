@@ -17,4 +17,12 @@ public extension MKMapView {
         self.register(reusableAnnotation.self,
                       forAnnotationViewWithReuseIdentifier: reusableAnnotation.reuseIdentifier)
     }
+
+    /// Registers an array of `ReusableAnnotation` objects with the map view.
+    /// - Parameter reusableAnnotations: Array of objects to be registered.
+    func register(_ reusableAnnotations: [ReusableAnnotation.Type]?) {
+        reusableAnnotations?.forEach { reusableType in
+            self.register(reusableType)
+        }
+    }
 }
